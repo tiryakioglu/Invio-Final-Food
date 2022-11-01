@@ -106,7 +106,7 @@ extension CartVC : UITableViewDelegate, UITableViewDataSource
             
         }
         
-        deleteAction.backgroundColor = UIColor(named: "SecondyColor")
+        deleteAction.backgroundColor = UIColor(named: "FirstColor")
         deleteAction.image = UIImage(systemName: "trash.fill")
         
         
