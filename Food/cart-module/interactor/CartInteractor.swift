@@ -17,7 +17,7 @@ class CartInteractor : PresenterToInteractorCartProtocol
         
         let param : Parameters = ["kullanici_adi" : "ali_tiryakioglu"]
         
-        AF.request("http://kasimadalan.pe.hu/yemekler/sepettekiYemekleriGetir.php", method: .post, parameters: param).responseJSON{ response in
+        AF.request("http://kasimadalan.pe.hu/yemekler/sepettekiYemekleriGetir.php", method: .post, parameters: param).response { response in
             if let data = response.data
             {
                 do {

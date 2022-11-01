@@ -31,9 +31,15 @@ class CartVC: UIViewController {
 
     @IBAction func buttonDelete(_ sender: Any) {
         self.cartPresenterObject?.allDeleteFoodCart(carts: cartFoods)
-        DispatchQueue.main.async {
-            self.cartTableView.reloadData()
-            self.totalPrice.text = "0 ₺"
+        let alert = UIAlertController(title: "Basket", message: "Basket emptied", preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "Ok!", style: .default){ action in
+            self.navigationController?.popToRootViewController(animated: true)
+        }
+        alert.addAction(OKAction)
+        self.present(alert, animated: true)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                self.cartTableView.isHidden = true
+                self.totalPrice.text = "0 ₺"
         }
     }
     
@@ -46,17 +52,12 @@ extension CartVC : PresenterToViewCartProtocol
     
     func sendDataToView(cartList: Array<Cart>) {
         self.cartFoods = cartList
-        
-        
         DispatchQueue.main.async {
             self.cartTableView.reloadData()
-            
             var total = 0
-            
             self.cartFoods.forEach{   cart_food in
-                
                 total = total  + (Int(cart_food.yemek_fiyat ?? "0")! * Int(cart_food.yemek_siparis_adet ?? "0")!)
-                
+                self.cartTableView.isHidden = false
             }
            self.totalPrice.text = "\(total) ₺"
         }
