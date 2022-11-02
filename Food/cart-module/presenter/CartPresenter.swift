@@ -22,15 +22,11 @@ class CartPresenter : ViewToPresenterCartProtocol
     func allDeleteFoodCart(carts: Array<Cart>) {
         cartInteractor?.allDeleteCart(carts: carts)
     }
-
 }
 
 extension CartPresenter : InteractorToPresenterCartProtocol
 {
-    
     func sendDataToPresenter(cartList: Array<Cart>) {
         cartView?.sendDataToView(cartList: cartList)
     }
-    
-    
 }

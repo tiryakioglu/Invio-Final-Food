@@ -10,7 +10,6 @@ import Alamofire
 
 class CartInteractor : PresenterToInteractorCartProtocol
 {
-    
     var cartPresenter: InteractorToPresenterCartProtocol?
     
     func showCart() {
@@ -27,17 +26,12 @@ class CartInteractor : PresenterToInteractorCartProtocol
                     {
                         list = answerList
                     }
-                    
                     self.cartPresenter?.sendDataToPresenter(cartList: list)
-                    
-                    
                 } catch  {
                     print(error.localizedDescription)
                 }
             }
-            
         }
-        
     }
     
     func deleteCart(cart: Cart, kullanici_adi: String) {
@@ -55,9 +49,7 @@ class CartInteractor : PresenterToInteractorCartProtocol
                     print(error.localizedDescription)
                 }
             }
-            
         }
-        
     }
     
     func allDeleteCart(carts : Array<Cart>)
@@ -69,6 +61,4 @@ class CartInteractor : PresenterToInteractorCartProtocol
             self.showCart()
         }
     }
-    
-    
 }

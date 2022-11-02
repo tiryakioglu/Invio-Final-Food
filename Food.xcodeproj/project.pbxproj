@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C46994D52912197800A2E7F2 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = C46994D42912197800A2E7F2 /* Lottie */; };
+		C46994D729121ACB00A2E7F2 /* empty.json in Resources */ = {isa = PBXBuildFile; fileRef = C46994D629121ACB00A2E7F2 /* empty.json */; };
 		C4A303DA29116DDE00F4A862 /* CartProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A303D929116DDE00F4A862 /* CartProtocols.swift */; };
 		C4A303DC29116DEB00F4A862 /* CartRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A303DB29116DEB00F4A862 /* CartRouter.swift */; };
 		C4A303DE29116DFC00F4A862 /* CartInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A303DD29116DFC00F4A862 /* CartInteractor.swift */; };
@@ -38,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C46994D629121ACB00A2E7F2 /* empty.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = empty.json; path = ../../../../../Downloads/empty.json; sourceTree = "<group>"; };
 		C4A303D929116DDE00F4A862 /* CartProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartProtocols.swift; sourceTree = "<group>"; };
 		C4A303DB29116DEB00F4A862 /* CartRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartRouter.swift; sourceTree = "<group>"; };
 		C4A303DD29116DFC00F4A862 /* CartInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartInteractor.swift; sourceTree = "<group>"; };
@@ -75,6 +78,7 @@
 			files = (
 				C4C623142910E9610089252F /* Kingfisher in Frameworks */,
 				C4B6B7D82910C2D8008F4A64 /* Alamofire in Frameworks */,
+				C46994D52912197800A2E7F2 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +114,7 @@
 				C4A3074A290E2AAA00866CF7 /* Assets.xcassets */,
 				C4A3074C290E2AAA00866CF7 /* LaunchScreen.storyboard */,
 				C4A3074F290E2AAA00866CF7 /* Info.plist */,
+				C46994D629121ACB00A2E7F2 /* empty.json */,
 			);
 			path = Food;
 			sourceTree = "<group>";
@@ -318,6 +323,7 @@
 			packageProductDependencies = (
 				C4B6B7D72910C2D8008F4A64 /* Alamofire */,
 				C4C623132910E9610089252F /* Kingfisher */,
+				C46994D42912197800A2E7F2 /* Lottie */,
 			);
 			productName = Food;
 			productReference = C4A3073E290E2AA900866CF7 /* Food.app */;
@@ -350,6 +356,7 @@
 			packageReferences = (
 				C4B6B7D62910C2D8008F4A64 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				C4C623122910E9610089252F /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				C46994D32912197800A2E7F2 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = C4A3073F290E2AA900866CF7 /* Products */;
 			projectDirPath = "";
@@ -366,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4A3074E290E2AAA00866CF7 /* LaunchScreen.storyboard in Resources */,
+				C46994D729121ACB00A2E7F2 /* empty.json in Resources */,
 				C4A3074B290E2AAA00866CF7 /* Assets.xcassets in Resources */,
 				C4A30749290E2AA900866CF7 /* Main.storyboard in Resources */,
 			);
@@ -618,6 +626,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		C46994D32912197800A2E7F2 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 		C4B6B7D62910C2D8008F4A64 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -637,6 +653,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C46994D42912197800A2E7F2 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C46994D32912197800A2E7F2 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
 		C4B6B7D72910C2D8008F4A64 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C4B6B7D62910C2D8008F4A64 /* XCRemoteSwiftPackageReference "Alamofire" */;
